@@ -21,12 +21,6 @@ Desativando uma virtualenv
 Para desativar uma virtualenv utilizamos o comando deactivate
 
 
-
-
-
-
-
-
 Criar Projeto
 Para criar um projeto no Django, utilizamos o seguinte comando no terminal:
 
