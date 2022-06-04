@@ -1,0 +1,76 @@
+Instalando a virtualenv
+A instalação de uma virtualenv é feita utilizando o pip, gerenciador de pacotes do Python. Já falamos sobre o PIP em um outro artigo aqui do blog. Caso você não saiba do que se trata ou como instalá-lo, sugiro você dar uma passada por lá :) Após instalar o pip, utilizamos o comando abaixo para instalar o pacote virtualenv em nosso computador:
+
+
+pip install virtualenv
+Feito isso, o pacote estará instalado e pronto para ser utilizado. Agora já podemos criar e gerenciar nossos ambientes virtuais.
+
+Criando uma nova virtualenv
+O processo de criação de uma virtualenv é bastante simples e pode ser feito utilizando um único comando, como podemos ver abaixo:
+
+
+virtualenv nome_da_virtualenv
+
+
+Ativando uma virtualenv
+Após criar uma virtualenv, precisamos ativá-la para que possamos instalar os pacotes necessários do projeto. Para isso, utilizamos o seguinte comando:
+
+source nome_da_virtualenv/bin/activate (Linux ou macOS)
+
+Desativando uma virtualenv
+Para desativar uma virtualenv utilizamos o comando deactivate
+
+
+
+
+
+
+
+
+Criar Projeto
+Para criar um projeto no Django, utilizamos o seguinte comando no terminal:
+
+
+django-admin startproject nome_do_projeto
+
+Criar Aplicação
+Após criar um projeto, precisamos criar uma (ou mais) aplicações para o projeto. Para isso, utilizamos o seguinte comando:
+
+
+python manage.py startapp nome_da_app
+
+Criar Migrações
+Após determinar quais serão as entidades que utilizaremos em nosso projeto, precisamos criar as tabelas que representam estas entidades no banco de dados. Para isso, utilizamos o seguinte comando:
+
+
+python mananage.py makemigrations
+
+Executar Migrações
+Após criar os arquivos que definem a estrutura de cada entidade no banco de dados, precisamos executar estas migrações. Para isso, utilizamos o seguinte comando:
+
+
+python manage.py migrate
+
+Executar Servidor de Desenvolvimento
+Para executar o servidor de desenvolvimento do Django e, assim, testar nosso projeto, utilizamos o seguinte comando:
+
+
+python manage.py runserver
+
+Limpar Banco de Dados
+Quando estamos desenvolvendo nossa aplicação, é comum que queiramos limpar todos os dados do banco de dados para realizar novos testes. Para realizar este procedimento, utilizamos o seguinte comando:
+
+
+python manage.py flush
+
+Abrir Shell do Banco de Dados Configurado
+Se quisermos manipular o banco de dados diretamente do shell do SGBD, podemos utilizar o seguinte comando para criar uma conexão com o mesmo:
+
+
+python manage.py dbshell
+
+Mapear BD existente para o projeto Django
+Caso você possua um banco de dados já existente e queira mapeá-lo para seu projeto Django, o seguinte comando resolve esta necessidade:
+
+
+python manage.py inspectdb > nome_da_app.models.py
